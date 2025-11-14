@@ -45,13 +45,12 @@ export default function Home() {
 
         {/* TOP COVER */}
         <View style={{ position: "relative" }}>
-      
-<Image
-  source={{ uri: "https://images.unsplash.com/photo-1501785888041-af3ef285b470" }}
-  style={styles.cover}
-  contentFit="cover"
-  cachePolicy="memory-disk"
-/>
+          <Image
+            source={{ uri: "https://images.unsplash.com/photo-1501785888041-af3ef285b470" }}
+            style={styles.cover}
+            contentFit="cover"
+            cachePolicy="memory-disk"
+          />
 
           {/* TOP RIGHT BUTTONS */}
           <View style={styles.topIcons}>
@@ -59,8 +58,9 @@ export default function Home() {
               <Ionicons name="funnel-outline" size={22} color="#fff" />
             </TouchableOpacity>
 
+            {/* 🔔 NOTIFICATION ICON (Updated) */}
             <TouchableOpacity style={styles.iconBtn}>
-              <Ionicons name="ellipsis-vertical" size={22} color="#fff" />
+              <Ionicons name="notifications-outline" size={22} color="#fff" />
             </TouchableOpacity>
           </View>
         </View>

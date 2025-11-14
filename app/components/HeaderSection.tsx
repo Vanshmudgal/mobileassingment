@@ -1,25 +1,39 @@
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function HeaderSection() {
   return (
-    <View style={styles.headerRow}>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Image
-          source={{
-            uri: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-          }}
-          style={styles.dp}
-        />
+    <View>
 
-        <View style={{ marginLeft: 12 }}>
-          <Text style={styles.name}>Joy Alexander</Text>
-          <Text style={styles.username}>@J_Jay</Text>
+      {/* TOP ROW — NAME + EDIT + 3 DOT */}
+      <View style={styles.headerRow}>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Image
+            source={{
+              uri: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+            }}
+            style={styles.dp}
+          />
+
+          <View style={{ marginLeft: 12 }}>
+            <Text style={styles.name}>Joy Alexander</Text>
+            <Text style={styles.username}>@J_Jay</Text>
+          </View>
+        </View>
+
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+          <TouchableOpacity style={styles.editBtn}>
+            <Text style={{ color: "#fff", fontWeight: "600" }}>
+              Edit Profile
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Ionicons name="ellipsis-vertical" size={22} color="#333" />
+          </TouchableOpacity>
         </View>
       </View>
 
-      <TouchableOpacity style={styles.editBtn}>
-        <Text style={{ color: "#fff", fontWeight: "600" }}>Edit Profile</Text>
-      </TouchableOpacity>
     </View>
   );
 }
@@ -29,6 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 6,
   },
   dp: {
     width: 78,

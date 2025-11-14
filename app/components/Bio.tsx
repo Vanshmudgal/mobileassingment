@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, Linking } from "react-native";
+import { Linking, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function BioAndWebsite() {
@@ -10,14 +10,23 @@ export default function BioAndWebsite() {
         <Text style={styles.bio}>Better things are coming !!</Text>
       </View>
 
-      {/* Website */}
-      <TouchableOpacity
-        style={styles.websiteRow}
-        onPress={() => Linking.openURL("https://yourdesignallypikko.framer.website")}
-      >
-        <Ionicons name="link-outline" size={18} color="#3B82F6" />
-        <Text style={styles.website}>yourdesignallypikko.framer...</Text>
-      </TouchableOpacity>
+      {/* Website + See more */}
+      <View style={styles.websiteContainer}>
+        <TouchableOpacity
+          style={styles.websiteRow}
+          onPress={() =>
+            Linking.openURL("https://yourdesignallypikko.framer.website")
+          }
+        >
+          <Ionicons name="link-outline" size={18} color="#3B82F6" />
+          <Text style={styles.website}>yourdesignallypikko.framer...</Text>
+        </TouchableOpacity>
+
+        {/* See more on the RIGHT */}
+        <TouchableOpacity>
+          <Text style={styles.seeMore}>See more</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -32,14 +41,29 @@ const styles = StyleSheet.create({
     marginLeft: 6,
     fontSize: 16,
   },
+
+  // ⭐ Horizontal container (URL left + See more right)
+  websiteContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between", // ← pushes See more to right
+    alignItems: "center",
+    marginTop: 8,
+  },
+
   websiteRow: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 8,
   },
   website: {
     marginLeft: 6,
     fontSize: 15,
     color: "#3B82F6",
+  },
+
+  // ⭐ Your color
+  seeMore: {
+    color: "#0F766E",
+    fontWeight: "600",
+    fontSize: 14,
   },
 });
