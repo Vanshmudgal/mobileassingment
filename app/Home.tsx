@@ -42,14 +42,16 @@ export default function Home() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#F8FAFB" }}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        
+
         {/* TOP COVER */}
         <View style={{ position: "relative" }}>
-          <Image
-            source="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
-            style={styles.cover}
-            contentFit="cover"
-          />
+      
+<Image
+  source={{ uri: "https://images.unsplash.com/photo-1501785888041-af3ef285b470" }}
+  style={styles.cover}
+  contentFit="cover"
+  cachePolicy="memory-disk"
+/>
 
           {/* TOP RIGHT BUTTONS */}
           <View style={styles.topIcons}>
