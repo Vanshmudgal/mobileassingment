@@ -49,9 +49,10 @@ Add advanced scalability optimizations like asset preloading and network-aware i
 
 
 ▶️ How to Run the Project
+
+
 1️⃣ Install Dependencies
 npm install
-
 
 or
 
