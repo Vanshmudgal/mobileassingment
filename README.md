@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+Project Summary
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a fully modular, visually polished React Native profile UI, built directly from a provided Figma design. The focus was on clean layout, consistent spacing, modern design patterns, and performance-friendly components. The app is entirely UI-driven using mocked data, enabling fast iteration and accurate representation of the original Figma layout.
 
-## Get started
+🔹 Design Decisions
 
-1. Install dependencies
+Built strictly following the Figma UI, matching layout, spacing, and color theme.
 
-   ```bash
-   npm install
-   ```
+Structured the screen with modular components (Header, Bio, Stats, Grid, BottomNav).
 
-2. Start the app
+Used expo-image for optimized rendering, caching, and fast image load performance.
 
-   ```bash
-   npx expo start
-   ```
+Followed a clean, modern design language with the accent color #0F766E.
 
-In the output, you'll find options to open the app in a
+Implemented Ionicons for a consistent icon system across the interface.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+🔹 Mocking Approach
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Used a local mockData object to simulate posts, clips, and tagged images.
 
-## Get a fresh project
+Used Unsplash image URLs to create realistic placeholder content.
 
-When you're ready, run:
+Handled tab switching with useState to imitate real UX interactions.
 
-```bash
-npm run reset-project
-```
+Entire screen is built with static data, no backend dependency.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🔹 Tradeoffs
 
-## Learn more
+No backend or API integration — everything is UI + static mock data.
 
-To learn more about developing your project with Expo, look at the following resources:
+No fallback UI for image failures or slow networks.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Custom bottom navigation instead of a full navigation system.
 
-## Join the community
+Grid and components are static/not optimized for large datasets.
 
-Join our community of developers creating universal apps.
+🔹 Future Improvements
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Add real notification features (alerts, badges, activity).
+
+Create fallback UI for images (skeleton loaders, retry, placeholder states).
+
+Add performance optimizations (memoization, lazy image loading, better caching).
+
+Integrate an actual backend (Supabase/Firebase) for real profile data.
+
+Add advanced scalability optimizations like asset preloading and network-aware image handling.
+
+▶️ How to Run the Project
+1️⃣ Install Dependencies
+npm install
+
+
+or
+
+yarn
+
+2️⃣ Start the Expo Development Server
+npx expo start
+
+3️⃣ Run on a Device or Emulator
+
+iPhone (Recommended):
+Install Expo Go → Scan the QR code
+
+Android Emulator:
+Press a in the terminal
+
+Web Preview:
+Press w in the terminal
