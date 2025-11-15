@@ -46,6 +46,8 @@ Integrate an actual backend (Supabase/Firebase) for real profile data.
 
 Add advanced scalability optimizations like asset preloading and network-aware image handling.
 
+
+
 ▶️ How to Run the Project
 1️⃣ Install Dependencies
 npm install
